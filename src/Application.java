@@ -4,20 +4,11 @@ import java.sql.SQLOutput;
 public class Application {
     public static void main(String[] args) {
         int m = 0;
-        int suma = 0;
 
-        while (m++ < 10) {
-            suma += m;
-        }
+        do
+            System.out.println("dziala");
 
-        System.out.println("Moja suma to : " + suma );
-        System.out.println("Poprawny wynik to : " + 55 );
+        while (m==0);
     }
-
-
-
-
-
-        /* MIEJSCE NA ZADANIA */
 }
 
