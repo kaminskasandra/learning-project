@@ -1,20 +1,29 @@
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
+        Animal calculator = new Animal();
+
+
+
         Scanner scanner = new Scanner(System.in);
-        Account account = new Account();
-        System.out.println("Starting balance: " + account.getBalance());
-        System.out.print("Enter the deposit amount: ");
+        String kontynuuj = "tak";
 
-        double depositAmount = scanner.nextDouble();
-        account.deposit(depositAmount);
-        System.out.println("Balance after payment: " + account.getBalance());
-        System.out.print("Enter the payment amount: ");
+        while (kontynuuj.equals("tak")) {
+            int a = scanner.nextInt();
+            int b = scanner.nextInt();
+            String operacja = scanner.next();
 
-        double withdrawAmount = scanner.nextDouble();
-        account.withdraw(withdrawAmount);
-        System.out.println("Balance after payment: " + account.getBalance());
+
+            if (operacja.equals("+")) {
+                System.out.println(calculator.dodawanie(a, b));
+            } else if (operacja.equals("-")) {
+                System.out.println(calculator.odejmowanie(a, b));
+            } else {
+                System.out.println("Operacja nie jest wspierana");
+            }
+
+            kontynuuj = scanner.next();
+        }
     }
 }
