@@ -1,29 +1,22 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Animal calculator = new Animal();
 
+        Scanner input = new Scanner(System.in);
+        System.out.println("Proszę podać swoje imię");
 
+        String name = input.next();
 
-        Scanner scanner = new Scanner(System.in);
-        String kontynuuj = "tak";
+        System.out.println("Proszę podać swój wiek");
 
-        while (kontynuuj.equals("tak")) {
-            int a = scanner.nextInt();
-            int b = scanner.nextInt();
-            String operacja = scanner.next();
+        int age = input.nextInt();
 
+        System.out.println("Proszę podać swoją pensję");
 
-            if (operacja.equals("+")) {
-                System.out.println(calculator.dodawanie(a, b));
-            } else if (operacja.equals("-")) {
-                System.out.println(calculator.odejmowanie(a, b));
-            } else {
-                System.out.println("Operacja nie jest wspierana");
-            }
+        double salary = input.nextDouble();
 
-            kontynuuj = scanner.next();
-        }
+        System.out.println("Twoja pensja to: " + salary);
     }
 }
